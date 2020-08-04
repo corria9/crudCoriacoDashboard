@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Nota de Remision | Coriaco Limpieza</title>
+   
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+  </head>
+  <body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">NOTA DE REMISION</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row my-5">
+        <div class="col-md-4">
+
+          <div class="card">
+            <div class="card-body">
+              <!-- FORM TO ADD TASKS -->
+              <form id="formTask">
+                <div class="form-group">
+                  <input type="text" id="title" placeholder="Ingresa Fecha" class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <textarea id="description" placeholder="Ingresa Observaciones" cols="20" rows="2" class="form-control"></textarea>
+                </div>
+
+                <div class="list-group">
+                  <input class="form-control text-center" type="text" placeholder="Ingresa Productos" readonly>
+                </div>
+                
+
+                    <!-- INSERTAR CARROUSEL DE FORM INPUT-->
+                <div class="row mt-3">
+                  <div class="col-3">
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                      <a class="nav-link active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-home" aria-selected="true">1</a>
+                      <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-profile" aria-selected="false">2</a>
+                      <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-messages" aria-selected="false">3</a>
+                      <a class="nav-link" id="v-pills-4-tab" data-toggle="pill" href="#v-pills-4" role="tab" aria-controls="v-pills-settings" aria-selected="false">4</a>
+                      <a class="nav-link" id="v-pills-5-tab" data-toggle="pill" href="#v-pills-5" role="tab" aria-controls="v-pills-profile" aria-selected="false">5</a>
+                      <a class="nav-link" id="v-pills-6-tab" data-toggle="pill" href="#v-pills-6" role="tab" aria-controls="v-pills-messages" aria-selected="false">6</a>
+                      <a class="nav-link" id="v-pills-7-tab" data-toggle="pill" href="#v-pills-7" role="tab" aria-controls="v-pills-settings" aria-selected="false">7</a>
+                      <a class="nav-link" id="v-pills-8-tab" data-toggle="pill" href="#v-pills-8" role="tab" aria-controls="v-pills-profile" aria-selected="false">8</a>
+                      <a class="nav-link" id="v-pills-9-tab" data-toggle="pill" href="#v-pills-9" role="tab" aria-controls="v-pills-messages" aria-selected="false">9</a>
+                      <a class="nav-link" id="v-pills-10-tab" data-toggle="pill" href="#v-pills-10" role="tab" aria-controls="v-pills-settings" aria-selected="false">10</a>
+                    </div>
+                  </div>
+                  <div class="col-9">
+                    <div class="tab-content" id="v-pills-tabContent">
+                      <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                        <tbody>
+                          <tr>
+                            <th scope="row"><input type="text" id="cantite" placeholder="Cantidad" class="form-control"></th>
+                            <td><input type="text" id="product" placeholder="Producto" class="form-control"></td>
+                            <td><input type="text" id="price" placeholder="Precio" class="form-control"></td>
+                            <td><input type="text" id="importe" placeholder="Importe" class="form-control"></td>
+                          </tr>
+                        </tbody>
+                      </div>
+                      <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                        <tbody>  
+                          <tr>
+                            <th scope="row"><input type="text2" id="cantite2" placeholder="Cantidad" class="form-control"></th>
+                            <td><input type="text" id="product2" placeholder="Producto" class="form-control"></td>
+                            <td><input type="text" id="price2" placeholder="Precio" class="form-control"></td>
+                            <td><input type="text" id="importe2" placeholder="Importe" class="form-control"></td>
+                          </tr>
+                        </tbody>
+                      </div>
+                      <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                        <tbody>
+                          <tr>
+                            <th scope="row"><input type="text" id="cantite3" placeholder="Cantidad" class="form-control"></th>
+                            <td><input type="text" id="product3" placeholder="Producto" class="form-control"></td>
+                            <td><input type="text" id="price3" placeholder="Precio" class="form-control"></td>
+                            <td><input type="text" id="importe3" placeholder="Importe" class="form-control"></td>
+                          </tr>
+                        </tbody>
+                      </div>
+                      <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-settings-tab"><tbody>
+                        <tr>
+                          <th scope="row"><input type="text4" id="cantite4" placeholder="Cantidad" class="form-control"></th>
+                          <td><input type="text" id="product4" placeholder="Producto" class="form-control"></td>
+                          <td><input type="text" id="price4" placeholder="Precio" class="form-control"></td>
+                          <td><input type="text" id="importe4" placeholder="Importe" class="form-control"></td>
+                        </tr>                       
+                      </tbody>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                      <tbody>  
+                        <tr>
+                          <th scope="row"><input type="text5" id="cantite5" placeholder="Cantidad" class="form-control"></th>
+                          <td><input type="text" id="product5" placeholder="Producto" class="form-control"></td>
+                          <td><input type="text" id="price5" placeholder="Precio" class="form-control"></td>
+                          <td><input type="text" id="importe5" placeholder="Importe" class="form-control"></td>
+                        </tr>
+                      </tbody>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-6" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                      <tbody>  
+                        <tr>
+                          <th scope="row"><input type="text6" id="cantite6" placeholder="Cantidad" class="form-control"></th>
+                          <td><input type="text" id="product6" placeholder="Producto" class="form-control"></td>
+                          <td><input type="text" id="price6" placeholder="Precio" class="form-control"></td>
+                          <td><input type="text" id="importe6" placeholder="Importe" class="form-control"></td>
+                        </tr>
+                      </tbody>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-7" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                      <tbody>  
+                        <tr>
+                          <th scope="row"><input type="text7" id="cantite7" placeholder="Cantidad" class="form-control"></th>
+                          <td><input type="text" id="product7" placeholder="Producto" class="form-control"></td>
+                          <td><input type="text" id="price7" placeholder="Precio" class="form-control"></td>
+                          <td><input type="text" id="importe7" placeholder="Importe" class="form-control"></td>
+                        </tr>
+                      </tbody>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-8" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                      <tbody>  
+                        <tr>
+                          <th scope="row"><input type="text8" id="cantite8" placeholder="Cantidad" class="form-control"></th>
+                          <td><input type="text" id="product8" placeholder="Producto" class="form-control"></td>
+                          <td><input type="text" id="price8" placeholder="Precio" class="form-control"></td>
+                          <td><input type="text" id="importe8" placeholder="Importe" class="form-control"></td>
+                        </tr>
+                      </tbody>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-9" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                      <tbody>  
+                        <tr>
+                          <th scope="row"><input type="text9" id="cantite9" placeholder="Cantidad" class="form-control"></th>
+                          <td><input type="text" id="product9" placeholder="Producto" class="form-control"></td>
+                          <td><input type="text" id="price9" placeholder="Precio" class="form-control"></td>
+                          <td><input type="text" id="importe9" placeholder="Importe" class="form-control"></td>
+                        </tr>
+                      </tbody>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-10" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                      <tbody>  
+                        <tr>
+                          <th scope="row"><input type="text" id="cantite10" placeholder="Cantidad" class="form-control"></th>
+                          <td><input type="text" id="product10" placeholder="Producto" class="form-control"></td>
+                          <td><input type="text" id="price10" placeholder="Precio" class="form-control"></td>
+                          <td><input type="text" id="importe10" placeholder="Importe" class="form-control"></td>
+                        </tr>
+                      </tbody>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                
+
+                
+
+
+
+                      <!-- INSERTAR CARROUSEL DE FORM INPUT-->
+
+                <div class="form-group">
+                  <input type="text" id="total" placeholder="Total a Pagar" class="form-control">
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Guardar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-8">
+          <div id="tasks"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>

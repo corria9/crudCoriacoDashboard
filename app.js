@@ -2,22 +2,26 @@ document.getElementById('formTask').addEventListener('submit', saveTask);
 
 function saveTask(e) {
   let date = document.getElementById('date').value;
+  let client = document.getElementById('client').value;
   let description = document.getElementById('description').value;
   let cantite = document.getElementById('cantite').value;
   let product = document.getElementById('product').value;
   let price = document.getElementById('price').value;
   let importe = document.getElementById('importe').value;
+  let subtotal = document.getElementById('subtotal').value;
   let total = document.getElementById('total').value;
   
-  console.log( date, description, cantite, product, price, importe, total );
+  console.log( date, client, description, cantite, product, price, importe, subtotal, total );
 
   let task = {
     date,
+    client,
     description,
     cantite,
     product,
     price,
     importe,
+    subtotal,
     total
   };
 
@@ -55,16 +59,18 @@ function getTasks() {
   tasksView.innerHTML = '';
   for(let i = 0; i < tasks.length; i++) {
     let date = tasks[i].date;
+    let client = tasks[i].client;
     let description = tasks[i].description;
     let cantite = tasks[i].cantite;
     let product = tasks[i].product;
     let price = tasks[i].price;
     let importe = tasks[i].importe;
+    let subtotal = tasks[i].subtotal;
     let total = tasks[i].total;
 
     tasksView.innerHTML += `<div class="card mb-3">
         <div class="card-body">
-          <p>${date} - ${description} - ${cantite} - ${product} - ${price}- ${importe} - ${total}
+          <p>${date} - ${client} - ${description} - ${cantite} - ${product} - ${price}- ${importe} - ${subtotal} - ${total}
           <a href="#" onclick="deleteTask('${date}')" class="btn btn-danger ml-5">Eliminar</a>
           </p>
         </div>

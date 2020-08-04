@@ -53,6 +53,16 @@ function deleteTask(date) {
   getTasks();
 }
 
+//GENERATE NEW DATE OF CREATION, THE SYSTEM GENERATE AUTOMATIC
+let fecha = new Date();
+//console.log(fecha);
+
+//ID GENERATE AUTOMATIC
+var num = Math.random();
+var id = num.toString(36).substr(2,9);
+id.length >= 9;
+//console.log(id);
+
 function getTasks() {
   let tasks = JSON.parse(localStorage.getItem('tasks'));
   let tasksView = document.getElementById('tasks');
@@ -70,7 +80,7 @@ function getTasks() {
 
     tasksView.innerHTML += `<div class="card mb-3">
         <div class="card-body">
-          <p>${date} - ${client} - ${description} - ${cantite} - ${product} - ${price}- ${importe} - ${subtotal} - ${total}
+          <p>${id} - ${fecha} - ${date} - ${client} - ${description} - ${cantite} - ${product} - ${price}- ${importe} - ${subtotal} - ${total}
           <a href="#" onclick="deleteTask('${date}')" class="btn btn-danger ml-5">Eliminar</a>
           </p>
         </div>

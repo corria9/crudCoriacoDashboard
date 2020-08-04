@@ -1,7 +1,7 @@
 document.getElementById('formTask').addEventListener('submit', saveTask);
 
 function saveTask(e) {
-  let title = document.getElementById('title').value;
+  let date = document.getElementById('date').value;
   let description = document.getElementById('description').value;
   let cantite = document.getElementById('cantite').value;
   let product = document.getElementById('product').value;
@@ -9,10 +9,10 @@ function saveTask(e) {
   let importe = document.getElementById('importe').value;
   let total = document.getElementById('total').value;
   
-  console.log( title, description, cantite, product, price, importe, total );
+  console.log( date, description, cantite, product, price, importe, total );
 
   let task = {
-    title,
+    date,
     description,
     cantite,
     product,
@@ -36,11 +36,11 @@ function saveTask(e) {
   e.preventDefault();
 }
 
-function deleteTask(title) {
-  console.log(title)
+function deleteTask(date) {
+  console.log(date)
   let tasks = JSON.parse(localStorage.getItem('tasks'));
   for(let i = 0; i < tasks.length; i++) {
-    if(tasks[i].title == title) {
+    if(tasks[i].date == date) {
       tasks.splice(i, 1);
     }
   }
@@ -54,7 +54,7 @@ function getTasks() {
   let tasksView = document.getElementById('tasks');
   tasksView.innerHTML = '';
   for(let i = 0; i < tasks.length; i++) {
-    let title = tasks[i].title;
+    let date = tasks[i].date;
     let description = tasks[i].description;
     let cantite = tasks[i].cantite;
     let product = tasks[i].product;
@@ -64,8 +64,8 @@ function getTasks() {
 
     tasksView.innerHTML += `<div class="card mb-3">
         <div class="card-body">
-          <p>${title} - ${description} - ${cantite} - ${product} - ${price}- ${importe} - ${total}
-          <a href="#" onclick="deleteTask('${title}')" class="btn btn-danger ml-5">Eliminar</a>
+          <p>${date} - ${description} - ${cantite} - ${product} - ${price}- ${importe} - ${total}
+          <a href="#" onclick="deleteTask('${date}')" class="btn btn-danger ml-5">Eliminar</a>
           </p>
         </div>
       </div>`;
